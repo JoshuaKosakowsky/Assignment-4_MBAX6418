@@ -1,26 +1,25 @@
 # Agent handoff
 
 ## Session
-2026-10-25 America/Denver; Codex; Joshua: personal-branch workflow published.
+2026-10-25 America/Denver; Codex; Joshua: requirements review and individual plan.
 ## Constraints
-Individual submissions; optional peer feedback. All branches remain public.
-Joshua authorizes commits/pushes for requested work. Main stays locked without new authorization.
+Work on individual/joshua; main remains frozen. No training or implementation requested yet.
+Priority: completed adapter durably saved, exact ZIP reloaded, then final inference.
 ## Repository state
-Current branch individual/joshua; baseline main 6e33a3a; setup PR #1 merged.
+Personal branch individual/joshua; pre-plan HEAD 5f0f0ab; main baseline 6e33a3a.
 ## Work completed and decisions
-Replaced team workflow with personal branches, optional reviews and branch-push CI.
-Published baseline, locked main, updated description, and created Joshua's branch.
-Independent final API comparison matches every field in .github/main-protection.json.
+Read full five-page brief; PLAN now covers all six completion milestones.
+ASSIGNMENT maps fixed data rules, evaluation, four files and adapter reload requirements.
+ADAPTER_RECOVERY plans verified Drive/local copies plus resumable training checkpoints.
 ## Validation
-Local scaffold and whitespace checks pass; all 10 hook tests pass with Git Bash on PATH.
-Push, PR and frozen-main GitHub CI passed; links and hashes in docs/TEST_RESULTS.md.
+Check docs/TEST_RESULTS.md for planning checks and limits; source links in plan/recovery docs.
 ## Blockers and unchecked areas
-No notebook, training, data validation, inference or submission artifacts implemented/tested.
-Personal branch names do not enforce privacy or exclusive collaborator write access.
-Course PDF/split_data remain outside Git; no invitations or classmate assignments made.
+No exposed Colab tools, connected notebook, Drive account/path, GPU or storage test.
+No model/settings selected; no raw-data verification, notebook execution or adapter exists.
+Supplied split filenames observed only; contents/selection correctness unverified.
 ## Next steps
-1. Continue Joshua's work on individual/joshua; classmates create their own personal branches.
-2. When requested, read the full brief and plan implementation choices with Joshua.
-3. Verify personal-branch push CI; keep subsequent evidence on this branch, never main.
+1. Connect course Colab MCP, save notebook in Drive and verify backup/download round trip.
+2. Verify fixed data and choose model/settings/prompts with Joshua before final training.
+3. Test export/reload, train with persisted checkpoints, back up completed ZIP immediately.
 ## References
-README.md; CONTRIBUTING.md; docs/GITHUB_SETUP.md; docs/TEST_RESULTS.md; merged PR #1.
+PLAN.md; docs/ASSIGNMENT.md; docs/ADAPTER_RECOVERY.md; docs/TEST_RESULTS.md.

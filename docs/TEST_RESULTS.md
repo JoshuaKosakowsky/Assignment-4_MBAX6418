@@ -72,3 +72,19 @@ or submission readiness. No application or app dependencies exist in this scaffo
   This completion evidence is maintained on the personal branch, leaving main frozen.
 - Live checks inspect policy without attempting an actual destructive main push.
   Personal branch ownership is a convention; no exclusive branch access is claimed.
+
+## Individual assignment planning — 2026-10-25 America/Denver
+
+- Reviewed all five pages of the local course brief; expanded docs/ASSIGNMENT.md
+  with data, evaluation, adapter reload and four-file submission requirements.
+- PLAN.md now sequences storage setup, data/experiment choices, training and
+  adapter backup, fresh-instance inference, comparison/report, and submission.
+- Added docs/ADAPTER_RECOVERY.md with Drive/local backup verification, periodic
+  full checkpoints, exact two-file ZIP checks and interruption recovery paths.
+- Checked current official Colab persistence FAQ, Unsloth training/checkpoint
+  guidance, PEFT adapter format and the course-specified Colab MCP README.
+- Confirmed supplied split filenames only; did not inspect or validate records.
+- Scaffold/link/tracked-file checks and whitespace checks pass. No executable
+  behavior changed; existing hook tests were not rerun locally for this docs change.
+- Not performed: MCP install/connection, storage test, GPU selection, model choice,
+  notebook implementation/execution, training, inference, backups or Canvas upload.

@@ -9,7 +9,8 @@ classmates' work. It does not represent a combined group submission.
 
 - Agents: [AGENTS.md](AGENTS.md), then [handoff.md](handoff.md).
 - Personal branches and feedback: [CONTRIBUTING.md](CONTRIBUTING.md).
-- Scope: [PLAN.md](PLAN.md); verified independence requirements: [docs/ASSIGNMENT.md](docs/ASSIGNMENT.md).
+- Joshua's completion plan: [PLAN.md](PLAN.md); requirements: [docs/ASSIGNMENT.md](docs/ASSIGNMENT.md).
+- Adapter backups and recovery: [docs/ADAPTER_RECOVERY.md](docs/ADAPTER_RECOVERY.md).
 - Main protection: [docs/GITHUB_SETUP.md](docs/GITHUB_SETUP.md).
 - Checks: [docs/TESTING.md](docs/TESTING.md), [docs/TEST_RESULTS.md](docs/TEST_RESULTS.md).
 - Individual work record: [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md).
@@ -55,6 +56,7 @@ adapter files and generated submission outputs outside Git. A personal branch
 has the same public visibility as main. Store credentials in environment variables
 or ignored `.env`; do not copy keys from another assignment.
 
+Joshua's requirements review and completion plan are recorded on this branch.
 No notebook, model, application stack or deliverables are implemented yet.
 The checks use only Python's standard library and validate repository safeguards,
 not assignment correctness. Each student must implement, execute and verify their
