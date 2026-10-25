@@ -1,36 +1,12 @@
-# Commit message conventions
+# Personal branch commits
 
-Adapted from Assignment 2. Follow for commits and PR titles.
+Commit your own work on your persistent `individual/<github-username>` branch
+(Joshua: `individual/joshua`). Use a clear subject such as `docs: Clarify the
+training plan`, `feat: Add notebook data checks` or `fix: Align predictions by ID`.
+Keep each commit focused and explain non-obvious decisions in its body.
 
-| Type | Purpose |
-|---|---|
-| feat | New feature |
-| fix | Bug fix |
-| refactor | Restructure without behavior change |
-| chore | Repository maintenance |
-| perf | Performance improvement |
-| ci | Continuous integration |
-| ops | Deployment/operations |
-| build | Build system or dependencies |
-| docs | Documentation |
-| style | Formatting only |
-| revert | Revert a change |
-| test | Tests |
-
-Use `type: Capitalized imperative subject`; aim for 50 characters and no final
-period. Explain non-obvious changes in a body, wrapped near 72 characters.
-Keep one logical change per commit. Prefer readable history without spending
-required-feature time rewriting otherwise useful commits for style alone.
-
-```text
-feat: Add the first verified user flow
-
-Describe the concrete behavior and explain why the change is needed.
-```
-
-Keep each PR focused on one behavior; milestone issues may have several child
-issues/PRs. Related small fixes stay with the current task. Agent branches use
-`codex/<task>`; human branches may use `feat/<slug>`, `fix/<slug>`, etc.
-Use `Refs #N` for partial work and `Closes #N` only when that issue's checks
-are met. Before publication use a PLAN ID. Commit wording preferences should
-not block an otherwise correct change. Update handoff.md each session.
+Personal commits and pushes need no PR or teammate approval. Never commit or
+push to main. Optional feedback branches start from the requesting student's
+branch and PR back to that branch, with their permission. Keep handoff current
+and follow that student's publication preferences. Do not rewrite classmates'
+history or publish secrets, private uploads, datasets or generated submissions.

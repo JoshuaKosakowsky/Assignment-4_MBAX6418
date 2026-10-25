@@ -1,19 +1,17 @@
-## Result
+## Optional feedback for an individual branch
 
-<!-- Concrete outcome; link the task. Refs #N for partial work; Closes #N only
-when all issue checks pass. No assignment implementation is planned yet. -->
+- Requesting student / personal target branch:
+- Branch owner's permission:
+- Concrete change or feedback requested:
 
 ## Verification
 
-- Commands/inputs and actual results:
-- Tested commit, tester and evidence:
-- Unchecked behavior / remaining blockers:
+- Commands and actual outcomes:
+- Unchecked behavior:
 
-## Ready for review
+- [ ] Target is the requesting student's personal branch, not frozen main
+- [ ] No credentials, private uploads, datasets or generated submissions included
+- [ ] Affected docs and handoff updated where relevant
 
-- [ ] Relevant checks ran and diff inspected
-- [ ] No credentials, private data or unreviewed course materials included
-- [ ] Shared-file/interface changes coordinated, if applicable
-- [ ] Affected docs and handoff current; eligible teammate review requested
-
-<!-- Correctness, safety and stated acceptance block; optional wording/refactors do not. -->
+Personal work does not require PRs or teammate approval. The branch owner decides
+whether to accept feedback and remains responsible for their individual submission.

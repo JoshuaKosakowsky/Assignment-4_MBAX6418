@@ -1,20 +1,21 @@
 ---
-name: Task / feature
-about: A focused outcome with concrete completion checks
-title: "feat: <short imperative outcome>"
+name: Personal task / feedback
+about: Optional tracking or discussion for an individual student's work
+title: "feat: <short outcome>"
 labels: enhancement
 ---
 
-## User outcome
+## Student and personal branch
 
-## PLAN task / verified requirements (when intake is authorized)
+## Outcome or feedback requested
 
-## Lead / contributors / dependencies
-<!-- One lead, up to two contributors; team chooses ownership. -->
+## Verified requirement / context
 
 ## Completion checks
-- [ ] Stated outcome verified with actual results
-- [ ] Relevant tests and affected docs/handoff updated
-- [ ] Shared interfaces coordinated; remaining parent work stays open
+- [ ] Outcome verified with actual results
+- [ ] Relevant tests and personal records updated
 
 ## Out of scope
+
+No shared task ownership or group submission is implied. Do not assign classmates
+without their permission or include credentials, private uploads or course datasets.

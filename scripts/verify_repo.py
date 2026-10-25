@@ -93,12 +93,12 @@ if policy_path.exists():
         'Required strict test check differs from baseline')
     require(policy['required_pull_request_reviews'] == {
         'dismiss_stale_reviews': True, 'require_code_owner_reviews': False,
-        'require_last_push_approval': True, 'required_approving_review_count': 1},
+        'require_last_push_approval': False, 'required_approving_review_count': 0},
         'Review policy differs from baseline')
-    for key in ('enforce_admins', 'required_conversation_resolution'):
+    for key in ('enforce_admins', 'required_conversation_resolution', 'lock_branch'):
         require(policy.get(key) is True, f'Protection must enable {key}')
     for key in ('allow_force_pushes', 'allow_deletions', 'required_linear_history',
-                'block_creations', 'lock_branch', 'allow_fork_syncing'):
+                'block_creations', 'allow_fork_syncing'):
         require(policy.get(key) is False, f'Protection differs: {key}')
     require(policy.get('restrictions') is None, 'Unexpected push restrictions')
 

@@ -1,30 +1,21 @@
-# Startup plan — Assignment 4
+# Assignment 4 — individual-work baseline
 
-**Current scope: repository and collaboration setup only.** Requirements intake,
-feature planning, architecture, data analysis and deliverables are deferred.
-Integration owner and implementation leads/contributors: **unassigned**.
+The repository supports separate individual submissions and optional peer feedback.
+There is no shared implementation backlog, integration owner or group deliverable.
 
-## A4-00 — Collaboration foundation
+## Baseline migration
 
-- Provide agent guidance, handoff and document-maintenance responsibilities.
-- Mirror Assignment 3's task branches, teammate review, labels and contribution record.
-- Provide offline scaffold checks, hook regression tests and CI job `test`.
-- Publish the repository and apply/read back the Assignment 3 main protection policy.
-- Leave invitations and team assignments to Joshua/the team.
+- Replace the inherited Assignment 3 team process with personal branch ownership.
+- Keep local main guards, tracked-file safeguards and offline CI.
+- Run CI on personal-branch pushes; reviews and feedback PRs are optional.
+- Publish this one-time migration through setup PR #1, then lock main read-only.
+- Start Joshua's work on `individual/joshua` from the resulting baseline.
 
-See [GitHub setup](docs/GITHUB_SETUP.md) for the intended policy and live inspection
-commands. A checked-in policy is not proof of enforcement; Actions and GitHub's
-branch settings are authoritative. Evidence belongs in docs/TEST_RESULTS.md.
+## Personal work, when requested
 
-Initial baseline `8deef29` is public. Offline checks, baseline CI and independent
-protection readback passed; all nine workflow labels are configured.
-See [verification evidence](docs/TEST_RESULTS.md). Collaborator invitations remain
-with Joshua; no requirements intake or implementation has begun.
-
-## Later, only when requested
-
-1. Read the actual Assignment 4 brief and review dataset handling/sharing.
-2. Record verified requirements and concrete acceptance checks; create scoped issues.
-3. Choose the minimal appropriate stack, assign ownership and begin implementation.
-
-No feature backlog, deadlines, services or acceptance IDs have been invented.
+Each student maintains their own plan and handoff on their personal branch.
+Review the full course brief, choose and justify model/settings/prompts with the
+student, implement and complete their own training and evaluation, and verify
+the four required submission files. See [ASSIGNMENT](docs/ASSIGNMENT.md).
+No model selection, training, notebook or assignment deliverables are implemented
+by this workflow migration. Course PDF and split_data remain outside the repo.

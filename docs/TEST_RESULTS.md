@@ -24,9 +24,30 @@
   `assignment4.allowPush=true`. Each teammate configures their own clone.
 - No collaborator invitations or assignments sent; Joshua manages those.
 
-GitHub Actions and branch settings remain authoritative for current server state.
-This verification record uses a task branch/PR after bootstrap; it cannot bypass
-teammate approval or merge itself without an eligible review.
+The sections above describe the original policy and are historical. The individual-work
+migration below supersedes the mandatory teammate-review workflow. GitHub Actions
+and branch settings remain authoritative for current server state.
 
 Not tested: assignment requirements, datasets, app behavior, services, deliverables
 or submission readiness. No application or app dependencies exist in this scaffold.
+
+## Individual-work migration — 2026-10-25 America/Denver
+
+- Prepared on `codex/setup-verification` from `b64299f`; existing PR #1 is reused
+  for the one-time baseline migration. Joshua explicitly authorized publication
+  and changing the repository to personal branches with frozen main.
+- `python scripts/verify_repo.py`: PASS; 23 tracked files, links, tracked-file
+  safeguards and final locked-main policy.
+- `python -m unittest discover -s tests -p 'test_*.py' -v`: PASS; all 10 tests on
+  Windows with Python 3.14 and Git Bash on PATH. The first run could not find
+  `sh`; adding Git for Windows' bin directory to PATH fixed the environment.
+- `git diff --check`: PASS. Existing hook-only executable-bit differences were
+  Windows filesystem artifacts; local `core.filemode=false` preserves the tracked
+  executable modes. Hook contents were deliberately updated for frozen main.
+- CI now runs on all branch pushes and optional PRs. The final saved main policy
+  enables branch lock/admin enforcement, retains strict `test` and conversation
+  resolution, and removes mandatory teammate/latest-push approval.
+- GitHub CI, merge and final API readback are pending at this commit. Completion
+  evidence will be recorded on `individual/joshua` after main is frozen.
+- No assignment notebook, training, data validation, inference, service calls or
+  submission artifacts were implemented or tested. No invitations were sent.

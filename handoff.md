@@ -1,24 +1,25 @@
 # Agent handoff
 
 ## Session
-2026-10-24 America/Denver; Codex. Task: initial Assignment 4 collaboration setup.
+2026-10-25 America/Denver; Codex; Joshua: individual-work workflow migration.
 ## Constraints
-Setup only; defer brief/data analysis, app design and deliverables. Joshua handles invites/assignments.
+Individual submissions; optional discussion/feedback. All published branches are public.
+Joshua explicitly authorizes commits/pushes and this one-time baseline migration.
 ## Repository state
-Branch codex/setup-verification; base main `8deef29`. Public remote JoshuaKosakowsky/Assignment-4_MBAX6418.
+Migration prepared on codex/setup-verification; pre-change HEAD b64299f, main 8deef29.
+Final workflow: frozen main; Joshua's persistent branch individual/joshua.
 ## Work completed and decisions
-23-file scaffold mirrors A3 process at `301585b`; no Jukebox requirements, credentials or app stack.
-Published baseline, configured 9 workflow labels, enabled local hooks and verified protected main.
-PDF and split_data remain untouched outside the repository. No invitations or assignments sent.
+Replaced team integration/review process with personal branches and optional feedback.
+CI runs on branch pushes; main policy removes mandatory review and locks main after merge.
+Read course brief for independence boundary only; no notebook/model/training implemented.
 ## Validation
-Scaffold check, 10 hook tests and whitespace check pass; baseline GitHub CI `test` passed.
-Independent API readback matches every saved protection field. See docs/TEST_RESULTS.md for evidence.
+See docs/TEST_RESULTS.md for local checks, CI and live GitHub readback evidence.
 ## Blockers and unchecked areas
-Verification docs go through a reviewed setup PR; eligible teammate approval is required before merge.
-Requirements, data and all application/deliverable behavior deliberately unreviewed and untested.
+Personal branch names do not enforce privacy or exclusive collaborator write access.
+No data, training, inference or submission validation; source materials remain outside Git.
 ## Next steps
-1. Joshua invites teammates through GitHub Settings > Collaborators; each follows README clone setup.
-2. An eligible teammate reviews the setup-verification PR; merge normally after approval and green CI.
-3. Begin requirements intake only when the user requests it; team chooses ownership.
+1. Finish publishing setup PR #1 through passing CI; lock and verify main.
+2. Create individual/joshua from the final baseline; inspect live state when resuming.
+3. When requested, plan Joshua's implementation from the complete course brief.
 ## References
-README.md; CONTRIBUTING.md; PLAN.md; docs/GITHUB_SETUP.md; docs/TEST_RESULTS.md; PR branch codex/setup-verification.
+README.md; CONTRIBUTING.md; docs/GITHUB_SETUP.md; docs/TEST_RESULTS.md; PR #1.
