@@ -1,42 +1,41 @@
-# GitHub setup and main protection
+# GitHub setup — frozen main and personal branches
 
 Repository: [Assignment-4_MBAX6418](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418).
-Owner: JoshuaKosakowsky. Public visibility mirrors Assignment 3; course source
-materials/datasets and secrets are excluded. Joshua handles invitations in
-[collaborator settings](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/settings/access).
-No invitation or ownership assignment is included in this setup.
+Owner: JoshuaKosakowsky. Visibility: public, including every personal branch.
+Joshua manages [collaborator access](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/settings/access).
+No invitation or assignment is part of this migration.
 
-## Required main protection
+## Final main policy
 
-[main-protection.json](../.github/main-protection.json) matches Assignment 3's
-live policy inspected on 2026-10-24:
+[main-protection.json](../.github/main-protection.json) describes the final policy:
 
-- Strict passing `test` check from GitHub Actions app 15368; branch up to date.
-- One approving review; dismiss stale approvals; require latest-push approval.
-- Conversation resolution required and rules enforced for administrators.
-- Force pushes and branch deletion disabled.
-- No code-owner, signed-commit or linear-history requirement; branch not locked.
+- Main is locked read-only, with rules enforced for administrators.
+- Force pushes, branch deletion and fork syncing are disabled.
+- Strict GitHub Actions `test` check and conversation resolution remain enabled.
+- Mandatory teammate approval and latest-push approval are disabled. Personal
+  work has no mandatory PR or review and is never merged into main.
 
-The saved JSON describes intended policy, not evidence of server enforcement.
-Inspect live GitHub settings and Actions; record readback in docs/TEST_RESULTS.md.
-After initial publication of the empty repository baseline, every change goes
-through a task branch and reviewed PR. Never relax protection to merge.
+The saved JSON is intended configuration; only a live API readback confirms
+enforcement. See [TEST_RESULTS](TEST_RESULTS.md) for evidence. Branch lock does
+not change public visibility or prevent an administrator from changing settings.
 
-## Maintainer commands
+## One-time transition
 
-These use an authenticated GitHub CLI. Applying protection is an initial setup
-operation; future changes need an explicitly authorized policy change.
+Joshua explicitly authorized publishing the individual-work setup on 2026-10-25.
+Update existing setup PR #1, change the obsolete mandatory review policy while
+retaining required CI, merge normally after green CI, then apply the final locked
+policy and verify it. This is the last baseline update for this migration.
+Do not use admin merge bypasses. Future unlocking needs explicit owner approval.
+
+Use the authenticated CLI to inspect policy:
 
 ```sh
-gh api --method PUT repos/JoshuaKosakowsky/Assignment-4_MBAX6418/branches/main/protection --input .github/main-protection.json
 gh api repos/JoshuaKosakowsky/Assignment-4_MBAX6418/branches/main/protection
 gh run list --repo JoshuaKosakowsky/Assignment-4_MBAX6418
 ```
 
-Enable hooks in each clone with README commands. They block main commits after
-the first commit and all main pushes/deletion. Enable them after the one-time
-empty-repo bootstrap push, before any team work. Task branch pushes require
-`assignment4.allowPush=true`; this local guard complements server enforcement.
-
-Use CONTRIBUTING's labels and review/merge rules. A public URL grants read access;
-teammates still need an accepted collaborator invitation for write access.
+Enable local hooks following README. They block main commits and all pushes or
+deletions targeting main. Personal branch pushes require the local opt-in
+`assignment4.allowPush=true`. Hooks supplement GitHub enforcement and must be
+enabled separately in each clone. Personal branch names are ownership conventions;
+they do not restrict other collaborators' technical write access.

@@ -23,7 +23,7 @@ class GitHookTests(unittest.TestCase):
             cls.git('-c', 'user.name=Hook Test', '-c', 'user.email=hooks@example.invalid',
                     'commit', '--allow-empty', '-m', message)
             setattr(cls, message, cls.git('rev-parse', 'HEAD').stdout.strip())
-        cls.git('branch', 'codex/hook-test')
+        cls.git('branch', 'individual/hook-test')
         cls.git('config', 'core.hooksPath', str(HOOKS))
 
     @classmethod
@@ -52,8 +52,8 @@ class GitHookTests(unittest.TestCase):
     def main_update(self, local=None, remote=None):
         return f'refs/heads/main {local or self.second} refs/heads/main {remote or self.first}'
 
-    def task_update(self):
-        return f'refs/heads/codex/task {self.second} refs/heads/codex/task {self.first}'
+    def personal_update(self):
+        return f'refs/heads/individual/test-student {self.second} refs/heads/individual/test-student {self.first}'
 
     def assert_blocked(self, result, message):
         self.assertNotEqual(result.returncode, 0, result.stderr)
@@ -62,8 +62,8 @@ class GitHookTests(unittest.TestCase):
     def test_main_commit_is_blocked(self):
         self.assert_blocked(self.hook('pre-commit'), 'Commit blocked')
 
-    def test_task_branch_commit_is_allowed(self):
-        self.git('switch', 'codex/hook-test')
+    def test_personal_branch_commit_is_allowed(self):
+        self.git('switch', 'individual/hook-test')
         try:
             result = self.hook('pre-commit')
             self.assertEqual(result.returncode, 0, result.stderr)
@@ -75,15 +75,15 @@ class GitHookTests(unittest.TestCase):
         self.assert_blocked(result, 'Commit blocked')
 
     def test_push_requires_publication_authorization(self):
-        result = self.hook('pre-push', allow_push=False, ref=self.task_update())
+        result = self.hook('pre-push', allow_push=False, ref=self.personal_update())
         self.assert_blocked(result, 'local-only')
 
     def test_main_fast_forward_push_is_blocked(self):
-        self.assert_blocked(self.hook('pre-push', ref=self.main_update()), 'main changes require reviewed PRs')
+        self.assert_blocked(self.hook('pre-push', ref=self.main_update()), 'main is frozen')
 
     def test_removed_setting_cannot_allow_main_push(self):
         result = self.hook('pre-push', extra_config=('assignment4.soloSetup=true',), ref=self.main_update())
-        self.assert_blocked(result, 'main changes require reviewed PRs')
+        self.assert_blocked(result, 'main is frozen')
 
     def test_main_deletion_is_blocked(self):
         result = self.hook('pre-push', ref=self.main_update(local='0' * 40))
@@ -93,13 +93,13 @@ class GitHookTests(unittest.TestCase):
         result = self.hook('pre-push', ref=self.main_update(local=self.first, remote=self.second))
         self.assert_blocked(result, 'no direct update or deletion')
 
-    def test_task_branch_push_is_allowed(self):
-        result = self.hook('pre-push', ref=self.task_update())
+    def test_personal_branch_push_is_allowed(self):
+        result = self.hook('pre-push', ref=self.personal_update())
         self.assertEqual(result.returncode, 0, result.stderr)
 
-    def test_main_push_is_blocked_in_a_batch_with_task_branch(self):
-        result = self.hook('pre-push', ref=self.task_update() + '\n' + self.main_update())
-        self.assert_blocked(result, 'main changes require reviewed PRs')
+    def test_main_push_is_blocked_in_a_batch_with_personal_branch(self):
+        result = self.hook('pre-push', ref=self.personal_update() + '\n' + self.main_update())
+        self.assert_blocked(result, 'main is frozen')
 
 
 if __name__ == '__main__':

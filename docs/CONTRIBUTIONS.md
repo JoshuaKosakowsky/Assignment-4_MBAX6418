@@ -1,13 +1,11 @@
-# Team completion record
+# Optional personal work record
 
-Record substantial completed tasks and reviews with verifiable evidence. Credit
-the teammate responsible for directing, checking and delivering the work, including
-AI-assisted work. Include implementation, review, debugging, testing, integration
-and docs. Combine follow-up revisions; skip routine edits and repeated review rounds.
-No rankings, effort estimates, line/commit counts or invented participation.
+Each student may maintain this file on their own branch to record decisions,
+AI assistance, implementation, troubleshooting and feedback they actually used.
+This is not a group contribution ledger or evidence of another student's
+assignment completion. Do not invent participation or use commit/line rankings.
 
-| Completed | Teammate(s) | Work | Outcome | Evidence |
-|---|---|---|---|---|
-| 2026-10-24 | JoshuaKosakowsky | Initial collaboration scaffold | Adapted A3 workflow, agent guidance, handoff, hooks, CI and team onboarding; assignment work deferred | [Verification](TEST_RESULTS.md), initial Git commit |
-
-No completed teammate reviews or assignment implementation are recorded yet.
+The common baseline was prepared under JoshuaKosakowsky's direction: initial
+scaffold on 2026-10-24, then individual-work migration on 2026-10-25. See
+[TEST_RESULTS](TEST_RESULTS.md). No assignment implementation or training is
+claimed by the baseline.
