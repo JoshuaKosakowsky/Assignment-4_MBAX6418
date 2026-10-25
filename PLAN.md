@@ -1,7 +1,7 @@
 # Joshua's Assignment 4 completion plan
 
 Branch: `individual/joshua`. Reviewed 2026-10-25 America/Denver.
-Status: requirements reviewed; implementation and all Colab work not started.
+Status: phase 1 verified (Colab connected, T4 recorded, Drive round trip OK); phase 2 decisions recorded in docs/EXPERIMENT.md.
 Priority: preserve a valid completed adapter and prove recovery before spending
 time on comparison figures and the report. Main stays frozen.
 
@@ -9,7 +9,7 @@ time on comparison figures and the report. Main stays frozen.
 
 - Use the course-specified [Colab MCP fork](https://github.com/davedgd/colab-mcp).
   Confirm tools can read the notebook, execute a cell and return its output.
-  No Colab tools are exposed in the current chat; connection is still unverified.
+  Connection verified 2026-10-25: notebook read/write/run worked end to end via the fork.
   Start with notebook control and manual GPU selection if needed; optional
   programmatic GPU OAuth is not a prerequisite to the assignment.
 - Create a Drive-saved notebook; select T4 and record actual GPU/memory.
