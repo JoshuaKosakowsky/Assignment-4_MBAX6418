@@ -1,0 +1,44 @@
+# Secrets and private configuration
+.env
+.env.*
+!.env.example
+class-endpoints.txt
+*credentials*
+*.pem
+*.key
+# Course sources and datasets pending sharing review
+*.pdf
+split_data/
+data/
+data_raw/
+*.jsonl
+# Runtime and generated files
+uploads/
+user_uploads/
+generated/
+outputs/
+results/raw/
+tmp/
+temp/
+logs/
+*.log
+*.sqlite*
+*.db
+*.zip
+# Dependencies, builds and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+node_modules/
+build/
+dist/
+coverage/
+.coverage
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
