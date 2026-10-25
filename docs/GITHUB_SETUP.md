@@ -6,6 +6,10 @@ materials/datasets and secrets are excluded. Joshua handles invitations in
 [collaborator settings](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/settings/access).
 No invitation or ownership assignment is included in this setup.
 
+Initial publication and independent protection readback completed on 2026-10-24;
+[baseline CI](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/actions/runs/40147904246)
+passed. Nine workflow labels are configured. See [evidence](TEST_RESULTS.md).
+
 ## Required main protection
 
 [main-protection.json](../.github/main-protection.json) matches Assignment 3's

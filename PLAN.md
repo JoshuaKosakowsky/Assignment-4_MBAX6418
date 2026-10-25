@@ -16,6 +16,11 @@ See [GitHub setup](docs/GITHUB_SETUP.md) for the intended policy and live inspec
 commands. A checked-in policy is not proof of enforcement; Actions and GitHub's
 branch settings are authoritative. Evidence belongs in docs/TEST_RESULTS.md.
 
+Initial baseline `8deef29` is public. Offline checks, baseline CI and independent
+protection readback passed; all nine workflow labels are configured.
+See [verification evidence](docs/TEST_RESULTS.md). Collaborator invitations remain
+with Joshua; no requirements intake or implementation has begun.
+
 ## Later, only when requested
 
 1. Read the actual Assignment 4 brief and review dataset handling/sharing.

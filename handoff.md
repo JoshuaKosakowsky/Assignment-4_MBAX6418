@@ -5,17 +5,20 @@
 ## Constraints
 Setup only; defer brief/data analysis, app design and deliverables. Joshua handles invites/assignments.
 ## Repository state
-New Assignment-4_MBAX6418 scaffold; verify actual branch/commit/status before continuing.
+Branch codex/setup-verification; base main `8deef29`. Public remote JoshuaKosakowsky/Assignment-4_MBAX6418.
 ## Work completed and decisions
-Adapted Assignment 3 collaboration guidance, hooks, CI, templates and policy; no A3 app material.
-Neutral repo name; PDF and split_data remain untouched outside the repository.
+23-file scaffold mirrors A3 process at `301585b`; no Jukebox requirements, credentials or app stack.
+Published baseline, configured 9 workflow labels, enabled local hooks and verified protected main.
+PDF and split_data remain untouched outside the repository. No invitations or assignments sent.
 ## Validation
-Scaffold check and 10 hook tests pass; whitespace clean. Fixed hook-test compatibility with older Git.
+Scaffold check, 10 hook tests and whitespace check pass; baseline GitHub CI `test` passed.
+Independent API readback matches every saved protection field. See docs/TEST_RESULTS.md for evidence.
 ## Blockers and unchecked areas
-No app/runtime/dependencies or requirements intake. GitHub server state requires live readback.
+Verification docs go through a reviewed setup PR; eligible teammate approval is required before merge.
+Requirements, data and all application/deliverable behavior deliberately unreviewed and untested.
 ## Next steps
-1. Publish the verified baseline; apply/read back protection and inspect the first CI run.
-2. Joshua invites teammates; future changes use task branches and reviewed PRs.
-3. Begin requirements intake only when the user requests it.
+1. Joshua invites teammates through GitHub Settings > Collaborators; each follows README clone setup.
+2. An eligible teammate reviews the setup-verification PR; merge normally after approval and green CI.
+3. Begin requirements intake only when the user requests it; team chooses ownership.
 ## References
-README.md; CONTRIBUTING.md; PLAN.md; docs/GITHUB_SETUP.md; docs/TEST_RESULTS.md.
+README.md; CONTRIBUTING.md; PLAN.md; docs/GITHUB_SETUP.md; docs/TEST_RESULTS.md; PR branch codex/setup-verification.
