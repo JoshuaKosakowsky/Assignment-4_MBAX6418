@@ -51,3 +51,24 @@ or submission readiness. No application or app dependencies exist in this scaffo
   evidence will be recorded on `individual/joshua` after main is frozen.
 - No assignment notebook, training, data validation, inference, service calls or
   submission artifacts were implemented or tested. No invitations were sent.
+
+## Published individual-work baseline — 2026-10-25 America/Denver
+
+- [Migration PR #1](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/pull/1)
+  merged normally after green push/PR checks; no admin merge bypass used.
+- Migration head: `60d4be72d7e3e9f283ef5bbcf5f36b0de94d4036`.
+  [Push CI](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/actions/runs/40236734849)
+  and [PR CI](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/actions/runs/40236738025)
+  both passed.
+- Frozen main: `6e33a3a8ba4c681aebfb7d87a4c951c7e4478cde`.
+  [Main CI](https://github.com/JoshuaKosakowsky/Assignment-4_MBAX6418/actions/runs/40236778858)
+  passed.
+- Final protection independently fetched and compared field by field with the
+  saved JSON: PASS. Main locked read-only; admins enforced; strict test check
+  and conversation resolution retained; force pushes/deletion/fork syncing off;
+  zero mandatory approvals and latest-push approval off.
+- Repository description updated to individual work; visibility remains public.
+- Created `individual/joshua` from frozen main and moved the local checkout there.
+  This completion evidence is maintained on the personal branch, leaving main frozen.
+- Live checks inspect policy without attempting an actual destructive main push.
+  Personal branch ownership is a convention; no exclusive branch access is claimed.
